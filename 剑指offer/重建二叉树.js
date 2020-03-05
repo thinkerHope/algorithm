@@ -1,16 +1,12 @@
 // 有先序和中序序列重建二叉树
-
 function TreeNode(x) {
   this.val = x;
   this.left = null;
   this.right = null;
 } 
-function reConstructBinaryTree(pre, vin)
-{
-  
+function reConstructBinaryTree(pre, vin) {
   if (pre.length === 0) return null;
-  
-  let len = vin.length;
+    
   let root = new TreeNode(pre[0]); 
   let preIndex
   let inIndex = vin.indexOf(pre[0]);
@@ -23,5 +19,4 @@ function reConstructBinaryTree(pre, vin)
   root.right = reConstructBinaryTree(rightPre,rightVin);
   
   return root;
-     
 }
