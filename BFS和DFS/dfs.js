@@ -14,11 +14,7 @@ for (let i = 0; i < vexNum; i++) {
   }
 }
 
-for (let i = 0; i < vexNum; i++) {
-  if (!visited[vertices[i]]) {
-    DFS(i)
-  }
-}
+DFS(0)
 
 const DFS = v => {
   visited[v] = true
