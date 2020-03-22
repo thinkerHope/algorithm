@@ -2,18 +2,20 @@
 const inorderTraversal = root => {
   const result = []
   const stack = []
-  let current = root
-  stack.push(current)
-
-  while (stack.length) {
-    while (current.lchild) {
-      stack.push(current.lchild)
-      current = current.lchild
+  if (root) {
+    let T = root
+    while (stack.length) {
+      while (stack[stack.length - 1]) {
+        stack.push(stack[stack.length - 1].lchild)
+      }
+      stack.pop()
+      if (stack.length) {
+        T = stack.pop()
+        result.push(T.val)
+        stack.push(T.rchild)
+      }
     }
-    current = stack.pop()
-    result.push(current.val)
-    if (current.rchild) stack.push(current.rchild)
   }
-  
+
   return result
 }
