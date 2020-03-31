@@ -7,6 +7,7 @@ function jumpFloor(number)
     if (number == 2) return 2
     for (let i = 0; i < number - 3; i++) {
         a = b
+        b = c
         c = a + b
     }
     return c
@@ -26,7 +27,7 @@ function jumpFloor(number)
     if (number == 0) return 0
     if (number == 1) return 1
     if (number == 2) return 2;
-    for (let i = 0; i < number-3; i++) {
+    for (let i = 0; i < number - 3; i++) {
         a = b
         b = c
         c = a + b
