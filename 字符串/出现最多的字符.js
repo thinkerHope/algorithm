@@ -1,6 +1,6 @@
 // hashTable
 function solution(str) {
-  const obj = {}
+  const obj = Object.create(null)
   let max = -1
   let letter = ''
   for (let i = 0; i < str.length; i++) {
