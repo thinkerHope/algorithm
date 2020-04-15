@@ -1,6 +1,6 @@
 // 反转一部分链表（递归）
+// 题解：https://leetcode-cn.com/problems/reverse-linked-list-ii/solution/bu-bu-chai-jie-ru-he-di-gui-di-fan-zhuan-lian-biao/
 let Successor = null
-
 var reverseN = function(head, N) {
   if (N === 1) {
     Succesor = head.next
